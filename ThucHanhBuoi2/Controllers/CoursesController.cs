@@ -9,6 +9,7 @@ namespace ThucHanhBuoi2.Controllers
 {
     public class CoursesController : Controller
     {
+        private List<Category> Categories;
         private readonly ApplicationDbContext _dbContext;
 
         
@@ -21,9 +22,9 @@ namespace ThucHanhBuoi2.Controllers
         {
             var viewModel = new CoursesController
             {
-                Categories = _dbContext.Categories.ToList();
+                Categories = _dbContext.Categories.ToList()
             };
-            return View(ViewModels);
+            return View(viewModel);
         }
     }
 }
