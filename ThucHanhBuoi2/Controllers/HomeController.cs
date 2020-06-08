@@ -26,5 +26,6 @@ namespace ThucHanhBuoi2.Controllers
 
             return View();
         }
+    
     }
 }
