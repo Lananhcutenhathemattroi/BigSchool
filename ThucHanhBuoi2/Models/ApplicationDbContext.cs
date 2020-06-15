@@ -7,8 +7,7 @@ using System.Web;
 
 namespace ThucHanhBuoi2.Models
 {
-    public class ApplicationDbContext: IdentityDbContext<ApplicationUser>
-    {
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
         public DbSet<Course> Courses { get; set; }
         public DbSet<Category> Categories { get; set; }
@@ -21,5 +20,6 @@ namespace ThucHanhBuoi2.Models
         {
             return new ApplicationDbContext();
         }
+       
     }
 }

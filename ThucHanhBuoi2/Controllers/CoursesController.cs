@@ -17,11 +17,10 @@ namespace ThucHanhBuoi2.Controllers
         
         public CoursesController ()
         {
-            _dbContext = new ApplicationDbContext();
+            _dbContext = new ApplicationDbContext.ApplicationDbContext();
         }
         // GET: Courses
-    
-        public ActionResult Create()
+         public ActionResult Create()
         {
             var viewModel = new CourseViewModel
             {
@@ -31,6 +30,7 @@ namespace ThucHanhBuoi2.Controllers
         }
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create( CourseViewModel viewModel)
         {
             if(!ModelState.IsValid)
